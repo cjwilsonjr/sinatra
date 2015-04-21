@@ -41,6 +41,7 @@ post "/login" do
   else
     @errors = "invalid username/password"
     erb :"/users/_new"
+  end
 end
 
 #LOGOUT
