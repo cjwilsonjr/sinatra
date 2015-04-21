@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Create an Account</h1>
   <!-- <form action="/users" method="POST"> -->
-  <%= erb :"/users/_new", locals {user: @user} %>
+  <%= erb :"/users/_new", locals: {user: @user} %>
   <!-- </form> -->
   <div class="errors">
     <% if @errors %>
