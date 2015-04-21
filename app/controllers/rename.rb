@@ -17,6 +17,7 @@ post "/renames" do
     redirect "/renames/#{@rename.id}"
   else
     @errors = @rename.errors.full_messages
+  end
 end
 
 #SHOW
@@ -34,7 +35,7 @@ end
 #UPDATE
 put "/renames/:id" do
   @rename = Rename.find(params[:id])
-  @rename.update!(params[:rename]
+  @rename.update!(params[:rename])
   redirect "/renames/#{params[:id]}"
 end
 
