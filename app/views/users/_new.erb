@@ -1,0 +1,16 @@
+<form action="/users" method="POST">
+  <ul>
+    <li>
+      <label for="user_username">Username</label>
+      <input id="user_username" type="text" name="user[username]" value="<%= user.name %>" />
+    </li>
+    <li>
+      <label for="user_email">Email</label>
+      <input id="user_email" type="email" name="user[email]" value="<%= user.email %>" />
+    </li>
+    <li>
+      <label for="user_password">Password</label>
+      <input id="user_password" type="password" name="user[password]" />
+    </li>
+  </ul>
+</form>
