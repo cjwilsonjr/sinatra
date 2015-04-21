@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   include BCrypt
 
+  has_many :entries, foreign_key: :author_id
+
   validates :username, presence: true, uniqueness: true, length: { minimum: 3, message: "username must be at least 3 characters"}
   validates :email, presence: true, uniqueness: true, format: /.+@.+\..+/
   validates :password, presence: true, length: { minimum: 6 }
@@ -15,8 +17,8 @@ class User < ActiveRecord::Base
 #takes plaintext password and makes a new BCrypt object
 #writes string hash to database, bcrypt hash meets up with attribute in dtabase
   def password=(plaintext_pass)
-    @password = Password.create(plaintext_pass)
-    self.password_digest = @password
+    @password = plaintext_pass
+    self.password = Password.create(plaintext_pass)
   end
 
   def self.authenticate(email, supplied_password)

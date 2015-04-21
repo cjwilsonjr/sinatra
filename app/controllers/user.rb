@@ -39,7 +39,7 @@ post "/login" do
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
-    @errors = "invalid username/password"
+    @errors = @user.errors.full_messages
     erb :"/users/_new"
   end
 end
