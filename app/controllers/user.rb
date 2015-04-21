@@ -40,7 +40,7 @@ post "/login" do
     redirect "/users/#{@user.id}"
   else
     @errors = "invalid username/password"
-    erb :"/users/_new"
+    erb :"/login"
   end
 end
 
