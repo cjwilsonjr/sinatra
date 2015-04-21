@@ -4,6 +4,10 @@ helpers do
     User.find(session[:user_id]) if session[:user_id]
   end
 
+  # def display_errors()
+
+  # end
+
   def entry_path(entry)
     "/entries/#{user.id}"
   end
