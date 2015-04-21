@@ -1,15 +1,15 @@
-<form action="/users" method="POST">
+<form action="/login" method="POST">
   <ul>
     <li>
       <label for="user_email">Email</label>
-      <input id="user_email" type="email" name="user[email]" value="<%= user.email %>" />
+      <input id="user_email" type="email" name="user[email]" />
     </li>
     <li>
       <label for="user_password">Password</label>
       <input id="user_password" type="password" name="user[password]" />
     </li>
     <li>
-      <label type="submit" value="Log In" />
+      <input type="submit" value="Log In" />
     </li>
   </ul>
 </form>

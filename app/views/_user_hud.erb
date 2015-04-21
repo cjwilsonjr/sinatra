@@ -1,7 +1,7 @@
 <nav>
   <h1><a href="/">Site Title</h1>
   <ul>
-  <% if @user %>
+  <% if current_user %>
     <li>
       <a href="/users/<%= current_user.id %>">@<%= current_user.username %></a>
     </li>
