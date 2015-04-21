@@ -2,7 +2,7 @@
   <ul>
     <li>
       <label for="user_username">Username</label>
-      <input id="user_username" type="text" name="user[username]" value="<%= user.name %>" />
+      <input id="user_username" type="text" name="user[username]" value="<%= user.username %>" />
     </li>
     <li>
       <label for="user_email">Email</label>
@@ -11,6 +11,9 @@
     <li>
       <label for="user_password">Password</label>
       <input id="user_password" type="password" name="user[password]" />
+    </li>
+    <li>
+      <input type="submit" value="Sign Up" />
     </li>
   </ul>
 </form>
