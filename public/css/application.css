@@ -1,0 +1,15 @@
+body {
+  border-bottom: 1px solid red ;
+}
+header li {
+  display: inline;
+}
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  text-align: center;
+}
+
+
