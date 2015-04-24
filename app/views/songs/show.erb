@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Title: <%= @song.title %></h1>
+  <h3>Artist: <%= @song.artist %></h3>
+  <h3>Album: <%= @song.album %></h3>
+
+  <% if current_user %>
+    <a href="/songs/<%= @song.id %>/edit">Edit Song</a></br></br>
+
+    <form action="/songs/<%= @song.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE" />
+      <input type="submit" value="Delete" />
+    </form>
+  <% end %>
+  <a href="/songs">Songs Index</a>
+</div>
