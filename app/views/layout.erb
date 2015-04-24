@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
   <!--
     application.css is where you put your styles
   -->
@@ -17,8 +18,15 @@
 
   <title></title>
 </head>
+
 <body>
-<header><%= erb :"_user_hud" %></header>
+<header>
+  <a href="/"><h1>Site Title</h1></a>
+  <%= erb :"_user_hud" %>
+</header>
+
+<div class="container" >
   <%= yield %>
+</div>
 </body>
 </html>
