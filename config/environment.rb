@@ -18,7 +18,7 @@ require 'pry'
 require 'bcrypt'
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'tinysong'
 require 'erb'
 
 require 'faker'

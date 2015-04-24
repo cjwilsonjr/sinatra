@@ -18,6 +18,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'pry'
 gem 'shotgun'
+gem 'tinysong'
 
 group :test do
   gem 'shoulda-matchers'
