@@ -8,6 +8,10 @@ get "/songs/new" do
   erb :"songs/new"
 end
 
+get "/songs/search" do
+  erb :"songs/_song_search"
+end
+
 post "/songs" do
   @song = Song.new(params[:song])
   if @song.save
