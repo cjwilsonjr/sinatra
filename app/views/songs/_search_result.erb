@@ -1,0 +1,12 @@
+<div class="search-result">
+	<table>
+	<% @results.each do |song| %>
+		<tr>
+			<td>Title: <%= song.title %></td>
+			<td>By: <%= song.artist %></td>
+			<td>Album: <%= song.album %></td>
+			<td>Link: <%= song.href %></td>
+		</tr>
+	<% end %>
+	</table>
+</div>

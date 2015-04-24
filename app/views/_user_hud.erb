@@ -1,23 +1,25 @@
 <nav>
-  <h1><a href="/">Site Title</h1>
   <ul>
   <% if current_user %>
     <li>
-      <a href="/users/<%= current_user.id %>">@<%= current_user.username %></a>
+      <a href="/users/<%= current_user.id %>"><h3>@<%= current_user.username %></h3></a>
     </li>
     <li>
-      <a href="/logout">Log Out</a>
+      <a href="/logout"><h3>Log Out</h3></a>
+    </li>
+    <li>
+      <a href="/songs/search"><h3>Search for Song</h3></a> 
     </li>
   <% else %>
     <li>
-      <a href="/login">Log In </a>
+      <a href="/login"><h3>Log In</h3> </a>
     </li>
     <li>
-      <a href="/users/new">Sign Up</a>
+      <a href="/users/new"><h3>Sign Up</h3></a>
     </li>
   <% end %>
     <li>
-      <a href="/">Home</a>
+      <a href="/"><h3>Home</h3></a>
     </li>
   </ul>
 </nav>

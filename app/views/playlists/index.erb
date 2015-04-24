@@ -1,0 +1,13 @@
+<h2>Latest Playlists</h2>
+<table class="index">
+  <th>Title</th>
+  <th>Creator</th>
+  <th>Contributors</th>
+  <% @playlists.each do |playlist, creator| %>
+  <!--not sure i'm getting contributors in the best way here :( -->
+    <tr>
+      <td><a href="/playlists/<%= playlist.id %>"><%= playlist.title %></a></td>
+      <td><a href="/playlists/<%= creator.id %>"><%= creator.username %></a></td>
+      <td><a href="/playlists/<%= playlist.id %>/search">Add a song!</a></td>
+    </tr>
+  <% end %>
